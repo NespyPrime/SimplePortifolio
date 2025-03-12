@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(background.jpeg);
+    color: rgba(232, 250, 239, 0.837);
+}
+body::before { 
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(9px); 
+    z-index: -1;
+}
+strong.name{
+    font-size: 1.5em;
+    font-family: Bradley Hand ITC;
+    
+}
+
+section.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+    width: 100%;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+article.description, section.details, footer {
+    padding: 20px;
+}
+
+article.description {
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.323);
+    padding: 0;
+}
+
+section.details {
+    display: flex;
+    flex-direction: column;
+}
+
+aside.skills, aside.contact {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    
+}
+
+aside.skills {
+    align-content: center;
+    justify-items: center;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.652);
+
+}
+
+aside.skills ul {
+    list-style: none;
+    padding: 0;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+aside.skills li {
+    margin-bottom: 5px;
+}
+
+aside.contact {
+    text-align: center;
+    color: rgba(12, 165, 12, 0.914);
+}
+
+aside.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+aside.contact input, aside.contact textarea, aside.contact button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid rgba(0, 128, 0, 0.166);
+    border-radius: 5px;
+    background-color: rgba(98, 175, 98, 0.147);
+}
+
+aside.contact textarea{
+    height: 150px;
+}
+
+aside.contact button{
+    width: 150px;
+    border-radius: 75px;
+}
+
+aside.contact button {
+    background-color:rgb(0, 128, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgba(128, 128, 128, 0.504);
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Desktop Styles */
+@media (min-width: 733px) {
+    section.profile {
+        justify-content: flex-start;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .profile-pic {
+        margin-right: 20px;
+    }
+
+    article.description {
+        text-align: left;
+        flex: 1;
+    }
+
+    section.details {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    aside.skills {
+        width: 35%;
+        text-align: left;
+    }
+
+    aside.contact {
+        width: 65%;
+        text-align: left;
+    }
+}
